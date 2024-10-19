@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pomodoro_nomad/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,16 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pomodoro nomad',
       theme: ThemeData(
-        textTheme: const TextTheme(
-          displayLarge: TextStyle(
-            color: Color(0xFF232B55),
+          textTheme: const TextTheme(
+            headlineLarge: TextStyle(
+              color: Color(0xFF232B55),
+            ),
           ),
-        ),
-        cardColor: const Color(0xFFF4EDDB),
-        colorScheme: ColorScheme.fromSwatch(
-          backgroundColor: const Color(0xFFE7626C),
-        ),
-      ),
+          cardColor: const Color(0xFFF4EDDB),
+          scaffoldBackgroundColor: const Color(0xFFE7626C)),
+      home: const HomeScreen(),
     );
   }
 }
